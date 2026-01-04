@@ -138,7 +138,7 @@ for (const sayi of sayilar) {
 }
 for (const key in tekrarobj) {
   if (tekrarobj[key] > 1) {
-    tekraredensayilar.push(`${key} sayısı ${tekrarobj[key]} tekrar edilmiştir`);
+    tekraredensayilar.push(`${key} sayısı ${tekrarobj[key]} kere tekrar edilmiştir`);
   }
 }
 console.log(tekraredensayilar);
