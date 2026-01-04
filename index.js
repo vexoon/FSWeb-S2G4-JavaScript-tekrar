@@ -98,28 +98,50 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
-
-/* kodlar buraya */
-
+enbuyuk = sayilar[0];
+enkucuk = sayilar[0];
+for (let i = 1; i < sayilar.length; i++) {
+  if (sayilar[i] < enkucuk) {
+    enkucuk = sayilar[i];
+  }
+  if (sayilar[i] > enbuyuk) {
+    enbuyuk = sayilar[i];
+  }
+}
+console.log(enbuyuk, enkucuk);
 // 3b çözümü:
-
-/* kodlar buraya */
-
+ucetambolunenler = [];
+sayilar.forEach(sayi => {
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+});
+console.log(ucetambolunenler);
 // 3c çözümü:
-
-/* kodlar buraya */
-
+ucebolunenlerintoplami = ucetambolunenler.reduce((acc, sayi) => acc + sayi, 0);
+console.log(ucebolunenlerintoplami);
 // 3d çözümü
-
-/* kodlar buraya */
-
+besyuzdenkucuksayilar = [];
+besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
+console.log(besyuzdenkucuksayilar);
 // 3e çözümü
-
-/* kodlar buraya */
-
+siralisayilar = [...besyuzdenkucuksayilar].sort((a, b) => a - b);
+console.log(siralisayilar);
 // 3f çözümü
-
-/* kodlar buraya */
+tekraredensayilar = [];
+const tekrarobj = {};
+for (const sayi of sayilar) {
+  if (!tekrarobj[sayi]) {
+    tekrarobj[sayi] = 0;
+  }
+  tekrarobj[sayi] += 1;
+}
+for (const key in tekrarobj) {
+  if (tekrarobj[key] > 1) {
+    tekraredensayilar.push(`${key} sayısı ${tekrarobj[key]} tekrar edilmiştir`);
+  }
+}
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
